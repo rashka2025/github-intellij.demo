@@ -86,26 +86,26 @@ public class ArrayStack <T> {
                 '}';
     }
 
-    public void merge(ArrayStack<T> arr1, ArrayStack<T> arr2) {
-        int newSize = arr1.size() + arr2.size();
+    public void mergan(ArrayStack<T> array1, ArrayStack<T> array2) {
+        int newSize = array1.size() + array2.size();
 
 
         if (stack.length < newSize) {
             stack = Arrays.copyOf(stack, newSize);
         }
 
-        for (int i = 0; i < arr1.size(); i++) {
+        for (int i = 0; i < array1.size(); i++) {
             boolean duplicated;
-            duplicated = isDuplicated(this, arr1.getElementByIndex(i));
+            duplicated = isDuplicated(this, array1.getElementByIndex(i));
             if (!duplicated)
-                this.push(arr1.stack[i]);
+                this.push(array1.stack[i]);
         }
 
-        for (int i = 0; i < arr2.size(); i++) {
+        for (int i = 0; i < array2.size(); i++) {
             boolean duplicated;
-            duplicated = isDuplicated(this, arr2.getElementByIndex(i));
+            duplicated = isDuplicated(this, array2.getElementByIndex(i));
             if (!duplicated)
-                this.push(arr2.stack[i]);
+                this.push(array2.stack[i]);
         }
     }
 
@@ -123,7 +123,7 @@ public class ArrayStack <T> {
 
         ArrayStack<String> list3 = new ArrayStack<>();
         System.out.println(list3);
-        list3.merge(list1, list2);
+        list3.mergan(list1, list2);
         list3.display();
     }
 }
