@@ -125,5 +125,11 @@ public class ArrayStack <T> {
         System.out.println(list3);
         list3.mergan(list1, list2);
         list3.display();
+
+//        ABDIRASHIID ABDILADHIIF CALI C1220269
+
+
     }
+
+
 }
